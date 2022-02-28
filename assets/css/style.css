@@ -2841,7 +2841,7 @@ table tbody tr td {
 
 /* Header Light */
 .header-light {
-  background-color: #8ec190;
+  background-color: #b7d4b9;
 }
 
 .header-light .navbar .logo-dark {
@@ -6709,7 +6709,7 @@ footer .widget-instagram .insta-hover i {
 
 .hiw {
   margin: 0px;
-  height: 140px;
+  height: auto;
 }
 
 .hiw h3 {
@@ -7680,41 +7680,6 @@ footer .widget-instagram .insta-hover i {
   background-size: cover;
 }
 
-.bg-register-image {
-  background: url("../images/signup.svg");
-  background-position: center;
-  background-size: 450px;
-  background-repeat: no-repeat;
-}
-
-.bg-login-image {
-  background: url("../images/login.svg");
-  background-position: center;
-  background-size: 400px;
-  background-repeat: no-repeat;
-}
-
-.bg-password-image {
-  background: url("../images/forgot.svg");
-  background-position: center;
-  background-size: 300px;
-  background-repeat: no-repeat;
-}
-
-.bg-success-image {
-  background: url("../images/mail.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.bg-image {
-  background: url("../images/group-of-company-img.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
 
 .bg-logo {
   background: url("../images/logo.png");
@@ -8020,6 +7985,7 @@ aside.clients img {
 }
 
 .intro-img{
+  background-position: center;
   background-image: url("../images/hero-img.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -8115,4 +8081,46 @@ line-height: 29px;
   background-repeat: no-repeat;
   width: 200px;
   height: 120px;
+}
+
+@media only screen and (min-width: 330px) and (max-width: 700px) {
+
+  .hiw hr{
+    width: 0px;
+  }
+
+  .intro{
+    height: 450px;
+  }
+  .prod{
+    width: auto;
+  }
+
+  .header-text{
+  padding-top: 36%;
+  margin: 35px;
+}
+
+
+  .header-text .heading{
+  font-size: 45px;
+}
+
+.header-text .sub-heading{
+  font-size: 33px;
+}
+
+  .products{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 710px) and (max-width: 1200px) {
+
+    .products{
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
 }
