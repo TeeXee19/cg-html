@@ -11,6 +11,7 @@
 
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/external.css">
+		
 		<title>Cosmopolitan Garment</title>
 	</head>
 <body>
@@ -50,23 +51,53 @@
         </nav>
     </header>
 
-    <section class="about">
-		<div class="container">
-			<div class="about_h">
-				<h2>ABOUT US</h2>
-			</div>
-		   <div class="row">
-		   	<div class="col-lg-6 col-md-12">
-		   		<p>Lorem Ipsum Dolor sit aet consectur avenire montserat condimentum ac turna urro adispict. elit.Lorem Ipsum Dolor sit aet consectur avenire montserat condimentum ac turna urro adispict. elit.Lorem Ipsum Dolor sit aet consectur avenire montserat condimentum ac turna urro adispict. elit.</p>
-		   		<br>
-		   		<p>Lorem Ipsum Dolor sit aet consectur avenire montserat condimentum ac turna urro adispict. elit.Lorem Ipsum Dolor sit aet consectur avenire montserat condimentum ac turna urro adispict. elit.</p>
-		   	</div>
-		   	<div class="col-4 offset-1 fac-img">
-		   		<img src="./assets/images/factory.png" style="width: inherit;" alt="Factory image">
-		   	</div>
-		   </div>
-		</div>    	
-    </section>
+    <section class="mb-3">
+  <div class="container card mt-2">
+  <form id="contact-form" class="card-body contact--box" >
+    <h2>Contact Us</h2>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="name">Name <b class="required-fields">*</b></label>
+          <input type="text" class="form-control" placeholder="Name" id="name" required>
+        </div>
+      </div>
+      <!--  col-md-6   -->
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="phone">Phone Number <b class="required-fields">*</b></label>
+          <input type="tel" class="form-control" id="phone" placeholder="phone" required>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="form-group">
+          <label for="email">Email address </label>
+          <input type="email" class="form-control" id="email" placeholder="email">
+        </div>
+      </div>
+    </div>
+      <!--  col-md-6   -->
+    <div >
+        <div class="form-group">
+          <label for="message">Message  <b class="required-fields">*</b></label>
+          <textarea name="message" class="form-control" rows="6" id="message" placeholder="Enter message" required></textarea>
+        </div>
+
+      </div>
+      <!--  col-md-6   -->
+    <!--  row   -->
+    <button type="submit" class="btn btn-primary btn--rounded ">Submit</button>
+  </form>
+</div>
+
+</section>
 
   	<footer class="footer-bs">
 	    <div class="row container">
@@ -98,5 +129,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+   (function (){
+        var frm = document.getElementById('contact-form')
+
+      frm.addEventListener('submit', function(event) {
+                event.preventDefault();
+      userId= "user_9LAgQw0bFBzgM3Zgcwrwo"
+      serviceId= "service_qx93s58"
+      templateId= "template_pyaosxe"
+      emailjs.init(userId);
+ 
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var phone = document.getElementById('phone').value;
+      var message = document.getElementById('message').value;
+
+
+      
+
+      var contactdetail = {
+          from_name: name,
+          from_email: email,
+          from_phone: phone,
+          from_message: message
+        };
+
+        console.log(contactdetail);
+
+
+       emailjs.send(serviceId, templateId, contactdetail).then(function (res) {
+          // alert("Email Sent Successfully");
+          new Noty({
+                theme: 'bootstrap-v4',
+                type: 'success',
+                layout: 'center',
+                text: 'Message Sent!',
+                timeout: 5000
+            }).show();
+        },
+          reason => {
+            // alert("Error Occur");
+             new Noty({
+                theme: 'sunset',
+                type: 'error',
+                layout: 'topRight',
+                text: 'Oops an Error Occored!',
+                timeout: 5000
+            }).show();
+          })
+
+       this.reset();
+      });
+
+
+   })();
+</script>
 	</body>
 </html>

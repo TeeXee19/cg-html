@@ -235,7 +235,7 @@ p {
 }
 
 .text-theme {
-  color: #026927 !important;
+  color: #a9cf46 !important;
 }
 
 .text--capitalize {
@@ -1336,24 +1336,24 @@ section {
 
 /* Button Primary */
 .btn--primary {
-  background-color: #026927;
+  background-color: #a8cf45;
   color: #ffffff;
-  border: 2px solid #026927;
+  border: 2px solid #a8cf45;
 }
 
 .btn--primary:active,
 .btn--primary:focus,
 .btn--primary:hover {
-  background-color: #026927;
+  background-color: #a8cf45;
   color: #ffffff;
-  border-color: #026927;
+  border-color: #a8cf45;
 }
 
 .btn--primary.btn--inverse:active,
 .btn--primary.btn--inverse:focus,
 .btn--primary.btn--inverse:hover {
   background-color: #ffffff;
-  color: #026927;
+  color: #a8cf45;
   border-color: #ffffff;
 }
 
@@ -2972,7 +2972,7 @@ table tbody tr td {
 .navbar-nav > li > a:focus,
 .navbar-nav > li > a:hover {
   background-color: transparent;
-  color: #026927;
+  color: #a9cf46;
 }
 
 /* Menu Level #1 */
@@ -2988,7 +2988,7 @@ table tbody tr td {
   margin: auto;
   width: 0;
   height: 3px;
-  background: #026927;
+  background: #a9cf46;
   content: "";
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -2997,7 +2997,7 @@ table tbody tr td {
 
 .navbar-nav > li > .menu-item:hover::before,
 .navbar-nav > li.active > .menu-item:before {
-  background-color: #026927;
+  background-color: #a9cf46;
   width: 21px;
 }
 
@@ -8083,7 +8083,17 @@ line-height: 29px;
   height: 120px;
 }
 
+.contact--box{
+  box-shadow: 5px 4px 6px 0.0625rem #1b1a1a24;
+  border-radius: 0.8%;
+}
+
+
 @media only screen and (min-width: 330px) and (max-width: 700px) {
+
+  .fac-img{
+    display: none;
+  }
 
   .hiw hr{
     width: 0px;
