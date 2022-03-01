@@ -6743,7 +6743,7 @@ footer .widget-instagram .insta-hover i {
 
 @media (max-width: 320px) {
   .hiw h3 {
-  padding-top: 30px;
+  padding-top: 34px;
 }
 
 .hiw div p {
@@ -6762,7 +6762,7 @@ footer .widget-instagram .insta-hover i {
 
 @media only screen and (min-width: 330px) and (max-width: 700px) {
   .hiw h3 {
-  padding-top: 30px;
+  padding-top: 4px;
   font-size: 26px;
 }
 
@@ -6779,9 +6779,7 @@ footer .widget-instagram .insta-hover i {
 }
 
 @media only screen and (min-width: 710px) and (max-width: 1200px) {
-  .hiw h3 {
-  padding-top: 30px;
-}
+
 
 .hiw div p {
   font-style: normal;
@@ -8097,7 +8095,8 @@ line-height: 29px;
   }
 
   .hiw hr{
-    width: 0px;
+    width: 40px;
+    border: 1px solid #ffffff;
   }
 
   .intro{
