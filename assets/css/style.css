@@ -6763,13 +6763,14 @@ footer .widget-instagram .insta-hover i {
 @media only screen and (min-width: 330px) and (max-width: 700px) {
   .hiw h3 {
   padding-top: 30px;
+  font-size: 26px;
 }
 
 .hiw div p {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 15px;
+  line-height: 15px;
   color: #ffffff;
 }
   .hiw_container {
@@ -8106,6 +8107,14 @@ line-height: 29px;
     width: auto;
   }
 
+  .prod h3{
+    font-size: 26px;
+    }
+
+  .prod h4{
+    font-size: 22px;
+  }
+
   .header-text{
   padding-top: 36%;
   margin: 35px;
@@ -8113,11 +8122,12 @@ line-height: 29px;
 
 
   .header-text .heading{
-  font-size: 45px;
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
 .header-text .sub-heading{
-  font-size: 33px;
+  font-size: 25px;
 }
 
   .products{
